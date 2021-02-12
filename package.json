@@ -1,0 +1,24 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "My template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Vadim",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "babel-loader": "^8.2.2",
+    "path": "^0.12.7",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}

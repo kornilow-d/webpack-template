@@ -1,3 +1,2 @@
 import "./js/common";
-
-import Vue from "vue";
+import "./css/main.scss";

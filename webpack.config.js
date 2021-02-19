@@ -62,6 +62,8 @@ module.exports = {
     ],
   },
   devServer: {
+    publicPath: "/",
+    contentBase: "./src",
     overlay: true,
   },
   plugins: [

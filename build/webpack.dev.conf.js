@@ -1,20 +1,15 @@
 const webpack = require("webpack");
-const { resolve } = require("path");
 const { merge } = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
-  devtool: "inline-source-map",
-  plugins: [
-    new webpack.SourceMapDevToolPlugin({
-      filename: "[name].map",
-    }),
-  ],
+  devtool: "source-map",
   devServer: {
     port: 8081,
     overlay: true,
     compress: true,
+    contentBase: baseWebpackConfig.externals.paths.dist,
   },
 });
 

@@ -4,8 +4,8 @@
   "description": "My template",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --open --config webpack.dev.conf.js",
-    "build": "webpack --config webpack.build.conf.js"
+    "dev": "webpack serve --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
   },
   "browserslist": [
     "> 1%",
@@ -18,9 +18,12 @@
     "@babel/preset-env": "^7.12.16",
     "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.2",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.2.0",
     "mini-css-extract-plugin": "^1.3.6",
     "node-sass": "^5.0.0",
     "path": "^0.12.7",

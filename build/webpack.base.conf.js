@@ -10,7 +10,6 @@ const PATHS = {
 };
 
 module.exports = {
-  watch: true,
   externals: {
     paths: PATHS,
   },
@@ -47,7 +46,7 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            options: { sourceMap: true },
+            options: { url: false, sourceMap: true },
           },
           {
             loader: "postcss-loader",
@@ -69,7 +68,7 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            options: { sourceMap: true },
+            options: { url: false, sourceMap: true },
           },
           {
             loader: "postcss-loader",
@@ -82,12 +81,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),
-    // new copyWebpackPlugin({
-    //   patterns: [
-    //     { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
-    //     { from: `${PATHS.src}/static`, to: "" },
-    //   ],
-    // }),
+    new copyWebpackPlugin({
+      patterns: [
+        { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
+      ],
+    }),
     new htmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.html`,

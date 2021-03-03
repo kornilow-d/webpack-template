@@ -5,6 +5,7 @@ const baseWebpackConfig = require("./webpack.base.conf");
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
   devtool: "source-map",
+  target: 'web',
   devServer: {
     port: 8081,
     overlay: true,
